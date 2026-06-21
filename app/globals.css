@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* ── Design tokens ─────────────────────────────────────────── */
+:root {
+  --background: #020617;       /* slate-950 */
+  --surface:    #0f172a;       /* slate-900 */
+  --border:     #1e293b;       /* slate-800 */
+  --text-primary:   #f1f5f9;  /* slate-100 */
+  --text-secondary: #94a3b8;  /* slate-400 */
+  --accent:     #6366f1;       /* indigo-500 */
+  --accent-hover: #818cf8;     /* indigo-400 */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-inter);
+}
+
+/* ── Base ──────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Dot-grid background pattern (CSS-only) ────────────────── */
+.dot-grid-bg {
+  background-image: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.12) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+}
+
+/* ── Gradient text utility ─────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #f1f5f9 0%, #818cf8 50%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Accent orb (decorative blur) ──────────────────────────── */
+.accent-orb {
+  border-radius: 9999px;
+  filter: blur(80px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Scrollbar styling ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155; /* slate-700 */
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; /* slate-600 */
+}
+
+/* ── Focus visible (accessibility) ────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
