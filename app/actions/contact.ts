@@ -52,7 +52,7 @@ export async function submitContactForm(
     // Once you verify callumboaden.com.au on Resend, you can change the "from" to your domain.
     const { data, error } = await resend.emails.send({
       from: "Portfolio Contact Form <onboarding@resend.dev>",
-      to: "callum@callumboaden.com.au", // Must be the email you registered on Resend
+      to: "hello@callumboaden.com.au", // Target email address
       subject: `New Lead: ${name} from ${business}`,
       html: `
         <h2>New Project Inquiry</h2>
