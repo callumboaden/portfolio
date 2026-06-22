@@ -27,7 +27,7 @@ export default function Footer() {
               brands. Based in Sydney, working globally.
             </p>
             <p className="text-slate-500 text-xs">
-              ABN: XX XXX XXX XXX
+              ABN: 56 741 029 084
             </p>
           </div>
 
